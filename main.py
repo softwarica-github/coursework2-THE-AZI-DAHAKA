@@ -20,10 +20,10 @@ def user_choice():
 
     try:
         choice = int(input("Enter your choice (0-8): "))
-        if 0 <= choice <= 11:
+        if 0 <= choice <= 8:
             return choice
         else:
-            print("Invalid choice. Please enter a number between 0 and 11.")
+            print("Invalid choice. Please enter a number between 0 and 8.")
             return user_choice()
     except ValueError:
         print("Invalid input. Please enter a valid number.\n")
@@ -219,7 +219,6 @@ def scan_file_for_c2_domain_names(file_path):
 
     except Exception as e:
         print(f"Error while scanning file '{file_path}': {e}")
-
 
 def scan_files_in_directory(directory_path):
     for root, dirs, files in os.walk(directory_path):
